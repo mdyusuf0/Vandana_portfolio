@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-50: #FFF5F8;
+  --color-purple-100: #FFE4EC;
+  --color-purple-200: #FFD4E0;
+  --color-purple-300: #FFC4D4;
+  --color-purple-400: #FFA8C2;
+  --color-purple-500: #FF8EAF;
+  --color-purple-600: #E65A84;
+  --color-purple-700: #CC3F6A;
+  --color-purple-800: #B32D56;
+  --color-purple-900: #8C1A3D;
+  --color-purple-950: #590F24;
+
+  --color-pink-50: #FFF5F8;
+  --color-pink-100: #FFE4EC;
+  --color-pink-200: #FFD4E0;
+  --color-pink-300: #FFC4D4;
+  --color-pink-400: #FFA8C2;
+  --color-pink-500: #FF8EAF;
+  --color-pink-600: #E65A84;
+  --color-pink-700: #CC3F6A;
+  --color-pink-800: #B32D56;
+  --color-pink-900: #8C1A3D;
+  --color-pink-950: #590F24;
+
+  --color-zinc-900: #14080D;
+  --color-zinc-950: #0A0306;
+  --color-gray-800: #211017;
+  --color-gray-900: #14080D;
+  --color-gray-950: #0A0306;
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-zinc-950);
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-aos="drop-bounce"] {
+  opacity: 0;
+}
+[data-aos="drop-bounce"].aos-animate {
+  animation: dropBounce 1.2s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+}
+
+@keyframes dropBounce {
+  0% { transform: translateY(-300px); opacity: 0; }
+  50% { transform: translateY(0); opacity: 1; }
+  65% { transform: translateY(-40px); opacity: 1; }
+  80% { transform: translateY(0); opacity: 1; }
+  90% { transform: translateY(-15px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
